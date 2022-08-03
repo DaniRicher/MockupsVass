@@ -26,7 +26,7 @@
     <div class="col-12">
         <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()" autocomplete="off">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xxl-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
                     <div class="mb-3 col-12">
                         <input type="text" 
                                class="form-control" 
@@ -57,14 +57,14 @@
                                formControlName="pais">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <div class="mb-3 col-12">
                         <input type="text" 
                                class="form-control" 
                                placeholder="Telefono"
                                formControlName="telefono">
                     </div>
-                    <div class="mb-3 col-12">
+                    <div class="mb-3 col-12 col-sm-12">
                         <label class="form-label">Mensaje</label>
                         <textarea class="form-control" rows="3" formControlName="mensaje"></textarea>
                         <span class="text-danger" *ngIf="validarCampos( 'mensaje' )"> El campo es obligatorio </span>
