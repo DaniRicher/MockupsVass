@@ -1,30 +1,33 @@
 <div class="row">
-    <div class="col">
+    <div class="col-12">
         <div class="contenedor">
             <div class="img">
             </div>
             <div class="text-end">
                 <h3 class="">CONTACTO</h3>
             </div>
-            <div class="col" style="padding: 5px;">
-                <div class="col-md-12 ">
-                    <h2>Empecemos a hacerlo sencillo</h2>
-                </div>
-                <div class="col-md-6 col-12 col-xs-1">
-                    <div class="">
-                        <p>Nos emociona impulsar tu transformación digital</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="sub" style="padding: 5px;">
+                        <div class="col-6 col-sm-6">
+                            <h2>Empecemos a hacerlo sencillo</h2>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>Nos emociona impulsar tu transformación digital</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
 
-<div class="row fondo">
+<div class="row fondo ">
     <div class="col-12">
         <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()" autocomplete="off">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="mb-3 col-12">
                         <input type="text" 
                                class="form-control" 
@@ -74,6 +77,11 @@
                       </div>
                 </div>
             </div>
+
+            <div class="mensaje" *ngIf="miFormulario.invalid && miFormulario.touched">
+                <span>Uno o más campos tienen un error. Por favor, revísalos e inténtalo de nuevo</span>
+            </div>
         </form>
     </div> 
+    <hr class="mensaje">
 </div>

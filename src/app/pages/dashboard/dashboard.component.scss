@@ -17,12 +17,16 @@ $color: white;
         left: 55%;
         transform: translate(-50%, -50%);
     }
+    .sub {
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
 }
 
 .fondo {
     background-color: black;
     form {
-        margin: 10px;
+        margin: 50px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
@@ -41,4 +45,7 @@ $color: white;
         border-color: gray;
         box-shadow: none;
     }
+}
+.mensaje {
+    color: $color;
 }
