@@ -5,7 +5,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ContactoComponent } from './contacto/contacto.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
@@ -13,7 +12,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   declarations: [
     MainComponent,
     DashboardComponent,
-    ContactoComponent
   ],
   imports: [
     CommonModule,

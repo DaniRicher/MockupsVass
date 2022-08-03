@@ -6,16 +6,74 @@
             <div class="text-end">
                 <h3 class="">CONTACTO</h3>
             </div>
-        </div>
-        <div class="col" style="padding: 5px;">
-            <div class="col-md-2 col-12 ">
-                <h2>Empecemos a hacerlo sencillo</h2>
-            </div>
-            <div class="col-md-6 col-12 col-xs-1">
-                <div class="">
-                    <p>Nos emociona impulsar tu transformación digital</p>
+            <div class="col" style="padding: 5px;">
+                <div class="col-md-12 ">
+                    <h2>Empecemos a hacerlo sencillo</h2>
+                </div>
+                <div class="col-md-6 col-12 col-xs-1">
+                    <div class="">
+                        <p>Nos emociona impulsar tu transformación digital</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="row fondo">
+    <div class="col-12">
+        <form [formGroup]="miFormulario" (ngSubmit)="enviarFormulario()" autocomplete="off">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3 col-12">
+                        <input type="text" 
+                               class="form-control" 
+                               placeholder="Nombre y apellidos"
+                               formControlName="nombre">
+                        <span class="text-danger" *ngIf="validarCampos( 'nombre' )"> El nombre es obligatorio </span>
+                    
+                    </div>
+                    <div class="mb-3 col-12">
+                        <input type="email" 
+                               class="form-control" 
+                               placeholder="Email"
+                               formControlName="email">
+                        <span class="text-danger" *ngIf="validarCampos( 'email' )"> El Email es obligatorio </span>
+
+                    </div>
+                    <div class="mb-3 col-12">
+                        <input type="text" 
+                               class="form-control" 
+                               placeholder="Empresa/Organismo"
+                               formControlName="empresa">
+                        <span class="text-danger" *ngIf="validarCampos( 'empresa' )">La empresa es obligatoria</span>
+                    </div>
+                    <div class="mb-3 col-12">
+                        <input type="text" 
+                               class="form-control" 
+                               placeholder="Pais"
+                               formControlName="pais">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3 col-12">
+                        <input type="text" 
+                               class="form-control" 
+                               placeholder="Telefono"
+                               formControlName="telefono">
+                    </div>
+                    <div class="mb-3 col-12">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" rows="3" formControlName="mensaje"></textarea>
+                        <span class="text-danger" *ngIf="validarCampos( 'mensaje' )"> El campo es obligatorio </span>
+
+                      </div>
+
+                      <div class="text-end">
+                          <button type="submit" class="btn btn-primary">Enviar</button>
+                      </div>
+                </div>
+            </div>
+        </form>
+    </div> 
 </div>
