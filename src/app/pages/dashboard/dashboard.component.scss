@@ -25,10 +25,15 @@ $color: white;
 
 .fondo {
     background-color: black;
+    border-color: white;
     form {
         margin: 50px;
         padding-top: 30px;
         padding-bottom: 30px;
+
+        .btn {
+            border-radius: 100px;
+        }
     }
     input {
         color: $color;
